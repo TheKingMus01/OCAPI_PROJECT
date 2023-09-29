@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Store Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        
+        h1, h2 {
+            color: #333;
+        }
+        
+        #header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        #catalogs {
+            text-align: center;
+            margin: 20px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        
+        #content {
+            display: none;
+            padding: 20px;
+        }
+        
+        #websitesContent, #ordersContent {
+            display: none;
+        }
+        .category {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+        
+        .category img {
+            max-width: 100%;
+            height: auto;
+        }
+        .website {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .website a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .website a:hover {
+            color: #ff6600;
+        }
+
+
+        table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Store Website</h1>
+    </div>
+    
+    <div id="catalogs">
+        <button id="catalogsButton">Categories</button>
+        <button id="websitesButton">Websites</button>
+        <button id="ordersButton">Orders</button>
+    </div>
+    
+    <div id="content">
+         <div id="catalogsContent">
+            <h2>Categories</h2>
+            <div id="output">
+
+            </div>
+        </div>
+        <div id="websitesContent">
+            <h2>Websites </h2>
+            <div id="websitesOutput"></div>
+        </div>
+        
+        <div id="ordersContent">
+            <h2>Orders </h2>
+            <div id="ordersOutput"></div>
+        </div>
+       
+        
+    </div>
+    
+    <script>
+        const websitesButton = document.getElementById("websitesButton");
+        const ordersButton = document.getElementById("ordersButton");
+        const catalogsButton = document.getElementById("catalogsButton");
+
+        const content = document.getElementById("content");
+        const websitesContent = document.getElementById("websitesContent");
+        const ordersContent = document.getElementById("ordersContent");
+        const catalogsContent = document.getElementById("catalogsContent");
+        websitesButton.addEventListener("click", () => {
+            content.style.display = "block";
+            websitesContent.style.display = "block";
+            ordersContent.style.display = "none";
+            catalogsContent.style.display = "none";
+        });
+        
+        ordersButton.addEventListener("click", () => {
+            content.style.display = "block";
+            websitesContent.style.display = "none";
+            ordersContent.style.display = "block";
+            catalogsContent.style.display = "none";
+        });
+        catalogsButton.addEventListener("click", () => {
+            content.style.display = "block";
+            websitesContent.style.display = "none";
+            ordersContent.style.display = "none";
+            catalogsContent.style.display = "block";
+
+        }); 
+        logButton.addEventListener("click", () => {
+            content.style.display = "block";
+            websitesContent.style.display = "none";
+            ordersContent.style.display = "none";
+            catalogsContent.style.display = "none";
+
+        });
+    </script>
+        <script src="script.js"></script>
+
+</body>
+</html>
